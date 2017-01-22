@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: post
 title:  "Path MTU Discovery, or How you broke the Internet."
 date:   2017-01-22 13:26:38 -0500
 categories: networking problems
@@ -24,13 +24,14 @@ was in fact a perfectly good reason the packets were stopping, and that's
 called path MTU discovery, or rather, the failure of path MTU discovery.
 
 For the uninitiated here are a couple of definitions:
-
-    MTU = Maximum Transmission Unit. This is the largest packet that will
-    be sent by a specific network interface.
-
-    Path MTU = The MTU for the complete path between any two network interaces.
-    The Path MTU is bounded by the smallest MTU of all of the network interfaces
-    a packet traverses between its source and destination.
+>
+>    MTU = Maximum Transmission Unit. This is the largest packet that will
+>    be sent by a specific network interface.
+>
+>    Path MTU = The MTU for the complete path between any two network interaces.
+>    The Path MTU is bounded by the smallest MTU of all of the network interfaces
+>    a packet traverses between its source and destination.
+>
 
 Path MTU discovery is actually a pretty elegant implementation. What happens
 in a properly functioning world is this: The sending device starts sending packets
