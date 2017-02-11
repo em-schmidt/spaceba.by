@@ -6,7 +6,7 @@ categories: networking problems
 ---
 
 TL;DR: Don't blindly block all ICMP messages... its more than just ping
-guys.
+folks.
 
 So this might be a bit esoteric, but it's something I've personally been
 caught by at least 3 times in a 20+ year career on the Internet. The
@@ -24,15 +24,15 @@ was in fact a perfectly good reason the packets were stopping, and that's
 called path MTU discovery, or rather, the failure of path MTU discovery.
 
 For the uninitiated here are a couple of definitions:
->
->    MTU = Maximum Transmission Unit. This is the largest packet that will
->    be sent by a specific network interface.
->
->    Path MTU = The MTU for the complete path between any two network interaces.
->    The Path MTU is bounded by the smallest MTU of all of the network interfaces
->    a packet traverses between its source and destination.
->
+```
+    MTU = Maximum Transmission Unit. This is the largest packet that will
+    be sent by a specific network interface.
 
+    Path MTU = The MTU for the complete path between any two network interaces.
+    The Path MTU is bounded by the smallest MTU of all of the network interfaces
+    a packet traverses between its source and destination.
+
+```
 Path MTU discovery is actually a pretty elegant implementation. What happens
 in a properly functioning world is this: The sending device starts sending packets
 as dictated by the application in use, the maximum size of those packets determined

@@ -4,4 +4,7 @@ title: About
 permalink: /about/
 ---
 
-The personal ramblings of eric m. schmidt.
+![eric][eric]The personal ramblings of eric m. schmidt.
+
+
+[eric]: {{site.url}}/images/eric-pirate.jpg
